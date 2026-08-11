@@ -31,14 +31,11 @@
     panel.className = "finance-demo-hero-panel";
     panel.setAttribute("aria-label", "Local educational demo sign in");
     panel.innerHTML = `
-      <section class="finance-demo-hero-card" aria-labelledby="finance-demo-hero-title">
+      <section class="finance-demo-hero-card" aria-label="Demo sign in">
         <div class="finance-demo-hero-accent" aria-hidden="true"></div>
         <div class="finance-demo-hero-card-content">
           <div data-finance-demo-hero-form-screen>
-            <p class="finance-demo-hero-kicker">Educational demo only</p>
-            <h2 id="finance-demo-hero-title">Demo Sign In</h2>
-            <p id="finance-demo-hero-privacy" class="finance-demo-hero-privacy">Use sample text only. Nothing entered here is saved or sent.</p>
-            <form class="finance-demo-hero-form" novalidate autocomplete="off" aria-describedby="finance-demo-hero-privacy">
+            <form class="finance-demo-hero-form" novalidate autocomplete="off">
               <label for="finance-demo-hero-user-id">User ID</label>
               <input id="finance-demo-hero-user-id" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true">
               <label for="finance-demo-hero-password">Password</label>
