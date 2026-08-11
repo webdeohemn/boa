@@ -44,7 +44,7 @@
                 <input id="finance-demo-hero-save-id" type="checkbox">
                 <span>Save demo ID</span>
               </label>
-              <button class="finance-demo-hero-submit" type="submit">Log in</button>
+              <button class="finance-demo-hero-submit" type="submit">Enter Demo</button>
             </form>
             <div class="finance-demo-hero-links" aria-label="Demo sign-in links">
               <button type="button" data-finance-demo-hero-inert>Forgot demo ID/password</button>
@@ -54,13 +54,6 @@
               <button type="button" data-finance-demo-hero-inert>Enroll</button>
             </div>
           </div>
-          <div class="finance-demo-hero-confirmation" data-finance-demo-hero-confirmation hidden>
-            <p class="finance-demo-hero-kicker">Demo Login</p>
-            <h2>Demo Login</h2>
-            <p>This is an educational finance demo — no real account was accessed.</p>
-            <button class="finance-demo-hero-submit" type="button" data-finance-demo-hero-continue>Continue to demo dashboard</button>
-            <button class="finance-demo-hero-back" type="button" data-finance-demo-hero-back>Back to demo sign in</button>
-          </div>
         </div>
       </section>
       <button class="finance-demo-hero-open-account" type="button" data-finance-demo-hero-inert><span aria-hidden="true">$</span> Open a Demo Account</button>`;
@@ -69,37 +62,18 @@
     masthead.classList.add("finance-demo-hero-ready");
 
     const form = panel.querySelector(".finance-demo-hero-form");
-    const formScreen = panel.querySelector("[data-finance-demo-hero-form-screen]");
-    const confirmation = panel.querySelector("[data-finance-demo-hero-confirmation]");
-    const continueButton = panel.querySelector("[data-finance-demo-hero-continue]");
-    const backButton = panel.querySelector("[data-finance-demo-hero-back]");
-    const userId = panel.querySelector("#finance-demo-hero-user-id");
-
-    const showForm = () => {
-      form.reset();
-      confirmation.hidden = true;
-      formScreen.hidden = false;
-      userId.focus();
-    };
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       event.stopPropagation();
       form.reset();
-      formScreen.hidden = true;
-      confirmation.hidden = false;
-      continueButton.focus();
+      document.dispatchEvent(new Event("finance-demo:dashboard"));
     });
 
     panel.querySelectorAll("[data-finance-demo-hero-inert]").forEach((button) => {
       button.addEventListener("click", (event) => event.preventDefault());
     });
 
-    continueButton.addEventListener("click", () => {
-      document.dispatchEvent(new Event("finance-demo:dashboard"));
-    });
-
-    backButton.addEventListener("click", showForm);
     return true;
   };
 
