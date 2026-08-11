@@ -42,9 +42,9 @@
               <input id="finance-demo-hero-password" type="password" autocomplete="off" data-1p-ignore="true" data-lpignore="true">
               <label class="finance-demo-hero-check" for="finance-demo-hero-save-id">
                 <input id="finance-demo-hero-save-id" type="checkbox">
-                <span>Save demo ID</span>
+                <span>Save user ID</span>
               </label>
-              <button class="finance-demo-hero-submit" type="submit">Enter Demo</button>
+              <button class="finance-demo-hero-submit" type="submit">Log in</button>
             </form>
             <div class="finance-demo-hero-links" aria-label="Demo sign-in links">
               <button type="button" data-finance-demo-hero-inert>Forgot demo ID/password</button>
