@@ -11,27 +11,48 @@
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-panel {
-  width: calc(100% - 8px);
-  max-width: 340px;
-  margin: 18px auto 0;
+  width: min(690px, calc(100vw - 64px));
+  max-width: 690px;
+  margin: 32px 0 0 32px;
   color: #13203a;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card {
+  position: relative;
+  min-height: 775px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 20px;
   background: #ffffff;
-  box-shadow: 0 10px 24px rgb(0 15 56 / 26%);
+  box-shadow: none;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-accent {
-  height: 6px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 16px;
   background: #cf3442;
 }
 
+#mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-accent::after {
+  position: absolute;
+  top: 0;
+  right: -18px;
+  width: 36px;
+  height: 16px;
+  background: #cf3442;
+  content: "";
+  transform: skewX(-42deg);
+  transform-origin: top left;
+}
+
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card-content {
-  padding: 18px 24px 20px;
+  position: relative;
+  z-index: 1;
+  padding: 48px 48px 45px;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card p {
@@ -51,6 +72,20 @@
   letter-spacing: 0.08em !important;
   line-height: 1.2 !important;
   text-transform: uppercase !important;
+}
+
+#mastheadContainerModule.finance-demo-hero-ready [data-finance-demo-hero-form-screen] > .finance-demo-hero-kicker,
+#mastheadContainerModule.finance-demo-hero-ready [data-finance-demo-hero-form-screen] > #finance-demo-hero-title,
+#mastheadContainerModule.finance-demo-hero-ready [data-finance-demo-hero-form-screen] > .finance-demo-hero-privacy {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card h2 {
@@ -74,28 +109,36 @@
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form {
   display: grid;
-  gap: 6px;
+  gap: 0;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form > label:not(.finance-demo-hero-check) {
-  margin-top: 3px;
-  color: #202a3c;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.2;
+  margin: 0 0 10px;
+  color: #111111;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="text"],
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="password"] {
   width: 100%;
-  height: 34px;
-  padding: 0 9px;
-  border: 1px solid #7e8da5;
-  border-radius: 4px;
-  color: #17233a;
+  height: 72px;
+  padding: 0 16px;
+  border: 2px solid #666666;
+  border-radius: 8px;
+  color: #111111;
   background: #ffffff;
   font: inherit;
-  font-size: 14px;
+  font-size: 22px;
+}
+
+#mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="text"] {
+  margin-bottom: 62px;
+}
+
+#mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="password"] {
+  margin-bottom: 62px;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="text"]:focus,
@@ -107,33 +150,36 @@
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-check {
   display: inline-flex;
-  margin: 5px 0 6px;
-  color: #273349;
-  font-size: 13px;
-  gap: 7px;
+  margin: 0 0 82px;
+  color: #111111;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.15;
+  gap: 20px;
   align-items: center;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-check input {
-  width: 16px;
-  height: 16px;
+  width: 38px;
+  height: 38px;
   margin: 0;
   accent-color: #082d73;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-submit {
   width: 100%;
-  min-height: 38px;
-  padding: 0 12px;
+  height: 88px;
+  min-height: 88px;
+  padding: 0 18px;
   border: 0;
-  border-radius: 999px;
+  border-radius: 44px;
   color: #ffffff;
-  background: #0b2f75;
-  box-shadow: 0 4px 9px rgb(7 29 72 / 18%);
+  background: #0b2b78;
+  box-shadow: none;
   cursor: pointer;
   font: inherit;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-submit:hover {
@@ -142,12 +188,14 @@
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links {
   display: flex;
-  margin-top: 15px;
-  color: #8390a4;
-  font-size: 10px;
-  gap: 5px;
+  flex-direction: column;
+  margin-top: 38px;
+  color: #1359af;
+  font-size: 27px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links button,
@@ -158,10 +206,21 @@
   background: transparent;
   cursor: pointer;
   font: inherit;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 27px;
+  font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+#mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-forgot {
+  display: block;
+}
+
+#mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-link-row {
+  display: inline-flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
 }
 
 #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links button {
@@ -225,44 +284,101 @@
 }
 
 @media (min-width: 1025px) {
+  #mastheadContainerModule.finance-demo-hero-ready {
+    --finance-demo-hero-shell: min(730px, 52vw);
+  }
+
   #mastheadContainerModule.finance-demo-hero-ready .masthead-children {
-    width: 354px;
-    max-width: 354px;
-    min-height: 500px;
+    width: var(--finance-demo-hero-shell);
+    max-width: var(--finance-demo-hero-shell);
+    min-height: 860px;
     z-index: 2;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready #mastheadPartialContent {
+    width: calc(100% - var(--finance-demo-hero-shell)) !important;
+    min-width: 0;
+    margin-left: var(--finance-demo-hero-shell) !important;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #mastheadContainerModule.finance-demo-hero-ready .curve {
+    display: block;
     overflow: hidden;
     background: #08296c;
   }
 
   #mastheadContainerModule.finance-demo-hero-ready .masthead-children {
-    position: absolute !important;
+    position: relative !important;
     z-index: 2;
-    top: 0 !important;
-    left: 0 !important;
+    top: auto !important;
+    left: auto !important;
     display: block !important;
-    width: 300px !important;
-    max-width: 300px !important;
+    width: 100% !important;
+    max-width: none !important;
     height: auto !important;
     min-height: 0 !important;
     overflow: visible !important;
     visibility: visible !important;
+    padding: 28px 0 0 !important;
   }
 
   #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-panel {
-    width: calc(100% - 20px);
-    max-width: 280px;
-    margin-top: 16px;
+    width: min(560px, calc(100% - 40px));
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card {
+    min-height: 665px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card-content {
+    padding: 40px 40px 38px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form > label:not(.finance-demo-hero-check) {
+    font-size: 24px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="text"],
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="password"] {
+    height: 62px;
+    font-size: 20px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="text"],
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="password"] {
+    margin-bottom: 48px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-check {
+    margin-bottom: 62px;
+    font-size: 24px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-check input {
+    width: 34px;
+    height: 34px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-submit {
+    height: 76px;
+    min-height: 76px;
+    border-radius: 38px;
+    font-size: 28px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links,
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links button {
+    font-size: 23px;
   }
 
   #mastheadContainerModule.finance-demo-hero-ready #mastheadPartialContent {
-    width: calc(100% - 316px) !important;
+    width: 100% !important;
     min-width: 0;
-    margin-left: 316px !important;
+    margin-left: 0 !important;
   }
 
   #mastheadContainerModule.finance-demo-hero-ready .headline-content .content-wrapper,
@@ -310,9 +426,72 @@
   }
 
   #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-panel {
-    width: calc(100% - 40px);
-    max-width: 350px;
+    width: calc(100% - 32px);
+    max-width: none;
     margin: 0 auto;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card {
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-accent,
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-accent::after {
+    height: 13px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card-content {
+    padding: 34px 24px 30px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form > label:not(.finance-demo-hero-check) {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="text"],
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="password"] {
+    height: 56px;
+    padding: 0 12px;
+    font-size: 18px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="text"],
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-form input[type="password"] {
+    margin-bottom: 34px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-check {
+    margin-bottom: 46px;
+    font-size: 20px;
+    gap: 14px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-check input {
+    width: 30px;
+    height: 30px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-submit {
+    height: 66px;
+    min-height: 66px;
+    border-radius: 33px;
+    font-size: 24px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links {
+    margin-top: 28px;
+    gap: 14px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links,
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links button {
+    font-size: 19px;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-link-row {
+    gap: 22px;
   }
 
   #mastheadContainerModule.finance-demo-hero-ready #mastheadPartialContent {
@@ -323,10 +502,15 @@
 
 @media (max-width: 390px) {
   #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-card-content {
-    padding: 17px 20px 19px;
+    padding: 32px 20px 28px;
   }
 
   #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-links {
     flex-wrap: wrap;
+  }
+
+  #mastheadContainerModule.finance-demo-hero-ready .finance-demo-hero-link-row {
+    flex-wrap: wrap;
+    row-gap: 10px;
   }
 }
