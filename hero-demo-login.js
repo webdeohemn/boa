@@ -39,22 +39,22 @@
             <h2 id="finance-demo-hero-title">Demo Sign In</h2>
             <p id="finance-demo-hero-privacy" class="finance-demo-hero-privacy">Use sample text only. Nothing entered here is saved or sent.</p>
             <form class="finance-demo-hero-form" novalidate autocomplete="off" aria-describedby="finance-demo-hero-privacy">
-              <label for="finance-demo-hero-user-id">Demo User ID</label>
+              <label for="finance-demo-hero-user-id">User ID</label>
               <input id="finance-demo-hero-user-id" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true">
-              <label for="finance-demo-hero-password">Demo Password</label>
+              <label for="finance-demo-hero-password">Password</label>
               <input id="finance-demo-hero-password" type="password" autocomplete="off" data-1p-ignore="true" data-lpignore="true">
               <label class="finance-demo-hero-check" for="finance-demo-hero-save-id">
                 <input id="finance-demo-hero-save-id" type="checkbox">
                 <span>Save demo ID</span>
               </label>
-              <button class="finance-demo-hero-submit" type="submit">Enter Demo</button>
+              <button class="finance-demo-hero-submit" type="submit">Log in</button>
             </form>
             <div class="finance-demo-hero-links" aria-label="Demo sign-in links">
-              <button class="finance-demo-hero-forgot" type="button" data-finance-demo-hero-inert>Forgot demo ID/password</button>
-              <span class="finance-demo-hero-link-row">
-                <button type="button" data-finance-demo-hero-inert>Security &amp; Help</button>
-                <button type="button" data-finance-demo-hero-inert>Enroll</button>
-              </span>
+              <button type="button" data-finance-demo-hero-inert>Forgot demo ID/password</button>
+              <span aria-hidden="true">•</span>
+              <button type="button" data-finance-demo-hero-inert>Security &amp; Help</button>
+              <span aria-hidden="true">•</span>
+              <button type="button" data-finance-demo-hero-inert>Enroll</button>
             </div>
           </div>
           <div class="finance-demo-hero-confirmation" data-finance-demo-hero-confirmation hidden>
@@ -89,7 +89,9 @@
       event.preventDefault();
       event.stopPropagation();
       form.reset();
-      document.dispatchEvent(new Event("finance-demo:dashboard"));
+      formScreen.hidden = true;
+      confirmation.hidden = false;
+      continueButton.focus();
     });
 
     panel.querySelectorAll("[data-finance-demo-hero-inert]").forEach((button) => {
