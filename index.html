@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Northstar Finance is a fictional educational finance demo with no real accounts or services.">
+    <title>Northstar Finance | Educational Demo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <section id="home-view" class="app-view" aria-label="Northstar Finance educational demo home">
+        <header class="site-header">
+          <div class="notice-strip" role="note">
+            <div class="notice-strip__content">
+              <span class="notice-strip__left">Northstar Finance demo products:</span>
+              <span class="notice-strip__badge">DEMO</span>
+              <span class="notice-strip__right">Educational prototype · no real accounts or services</span>
+            </div>
+          </div>
+
+          <nav class="utility-nav" aria-label="Utility navigation">
+            <div class="nav-shell utility-nav__shell">
+              <div class="utility-nav__group">
+                <button class="utility-link is-active" type="button" data-local-action>Personal</button>
+                <button class="utility-link" type="button" data-local-action>Wealth Planning</button>
+                <button class="utility-link" type="button" data-local-action>Business</button>
+                <button class="utility-link" type="button" data-local-action>Organizations</button>
+              </div>
+              <div class="utility-nav__group utility-nav__group--right">
+                <button class="utility-link" type="button" data-local-action>Security</button>
+                <button class="utility-link" type="button" data-local-action>About</button>
+                <span class="utility-divider" aria-hidden="true"></span>
+                <button class="utility-link" type="button" data-local-action>Language</button>
+                <span class="utility-divider" aria-hidden="true"></span>
+                <button class="utility-link" type="button" data-local-action>Contact</button>
+                <button class="utility-link" type="button" data-local-action>Help</button>
+              </div>
+            </div>
+          </nav>
+
+          <div class="brand-row">
+            <div class="nav-shell brand-row__shell">
+              <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-site-menu" data-mobile-menu-toggle>
+                <span class="mobile-menu-button__bars" aria-hidden="true"></span>
+                <span class="visually-hidden">Open menu</span>
+              </button>
+
+              <div class="demo-brand" aria-label="Northstar Finance demo">
+                <img class="demo-brand__mark" src="assets/northstar-mark.svg" alt="">
+                <span>Northstar Finance</span>
+              </div>
+
+              <form id="home-search-form" class="search-ui" role="search" novalidate data-search-form>
+                <label class="visually-hidden" for="home-search">Search the demo</label>
+                <input id="home-search" type="search" placeholder="Search the demo" autocomplete="off">
+                <button type="submit" aria-label="Search the demo" data-search-submit>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.25"></circle><path d="m15.25 15.25 5.25 5.25"></path></svg>
+                </button>
+              </form>
+
+              <div class="mobile-brand-actions">
+                <button class="mobile-login-button" type="button" data-focus-login>Login</button>
+                <button class="mobile-search-button" type="button" aria-label="Focus demo search" data-focus-search>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.25"></circle><path d="m15.25 15.25 5.25 5.25"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <nav class="product-nav" aria-label="Product navigation">
+            <div class="nav-shell">
+              <div class="product-nav__list">
+                <div class="product-nav__item">
+                  <button type="button" aria-expanded="false" aria-controls="checking-menu" data-dropdown-toggle>Checking <span aria-hidden="true">⌄</span></button>
+                  <div id="checking-menu" class="nav-popover" hidden><button type="button" data-local-action>Demo Checking</button><button type="button" data-local-action>Compare options</button></div>
+                </div>
+                <div class="product-nav__item">
+                  <button type="button" aria-expanded="false" aria-controls="savings-menu" data-dropdown-toggle>Savings <span aria-hidden="true">⌄</span></button>
+                  <div id="savings-menu" class="nav-popover" hidden><button type="button" data-local-action>Demo Savings</button><button type="button" data-local-action>Certificates</button></div>
+                </div>
+                <div class="product-nav__item">
+                  <button type="button" aria-expanded="false" aria-controls="cards-menu" data-dropdown-toggle>Cards <span aria-hidden="true">⌄</span></button>
+                  <div id="cards-menu" class="nav-popover" hidden><button type="button" data-local-action>Cash rewards</button><button type="button" data-local-action>Travel rewards</button></div>
+                </div>
+                <div class="product-nav__item">
+                  <button type="button" aria-expanded="false" aria-controls="loans-menu" data-dropdown-toggle>Home &amp; Auto <span aria-hidden="true">⌄</span></button>
+                  <div id="loans-menu" class="nav-popover" hidden><button type="button" data-local-action>Home planning</button><button type="button" data-local-action>Auto planning</button></div>
+                </div>
+                <div class="product-nav__item">
+                  <button type="button" aria-expanded="false" aria-controls="investing-menu" data-dropdown-toggle>Investing <span aria-hidden="true">⌄</span></button>
+                  <div id="investing-menu" class="nav-popover" hidden><button type="button" data-local-action>Guided investing</button><button type="button" data-local-action>Retirement tools</button></div>
+                </div>
+                <div class="product-nav__item">
+                  <button type="button" aria-expanded="false" aria-controls="habits-menu" data-dropdown-toggle>Money Habits <span aria-hidden="true">⌄</span></button>
+                  <div id="habits-menu" class="nav-popover" hidden><button type="button" data-local-action>Build a budget</button><button type="button" data-local-action>Learn the basics</button></div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <nav id="mobile-site-menu" class="mobile-site-menu" aria-label="Mobile navigation" hidden>
+            <button type="button" data-local-action>Personal</button>
+            <button type="button" data-local-action>Wealth Planning</button>
+            <button type="button" data-local-action>Business</button>
+            <button type="button" data-local-action>Organizations</button>
+            <button type="button" data-local-action>Security</button>
+            <button type="button" data-local-action>About</button>
+            <button type="button" data-local-action>Language</button>
+            <button type="button" data-local-action>Contact</button>
+            <button type="button" data-local-action>Help</button>
+          </nav>
+        </header>
+
+        <main id="home-main">
+          <section class="promo-hero" aria-labelledby="hero-title">
+            <div class="promo-hero__inner">
+              <aside class="demo-login-rail">
+                <section class="demo-login-card" aria-labelledby="demo-login-title">
+                  <div class="demo-login-card__accent" aria-hidden="true"></div>
+                  <div class="demo-login-card__content" data-login-form-screen>
+                    <p class="eyebrow">Educational demo only</p>
+                    <h2 id="demo-login-title">Demo Sign In</h2>
+                    <p class="demo-login-card__note">Use sample text only. Entries are discarded and never sent.</p>
+                    <form id="demo-login-form" novalidate autocomplete="off">
+                      <label for="demo-user-id">User ID</label>
+                      <input id="demo-user-id" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true">
+                      <label for="demo-password">Password</label>
+                      <input id="demo-password" type="password" autocomplete="off" data-1p-ignore="true" data-lpignore="true">
+                      <label class="check-row" for="demo-save-id">
+                        <input id="demo-save-id" type="checkbox">
+                        <span>Save user ID <small>(visual only)</small></span>
+                      </label>
+                      <button class="primary-button login-submit" type="submit">Log in</button>
+                    </form>
+                    <div class="login-links" aria-label="Demo sign-in links">
+                      <button type="button" data-local-action>Forgot user ID/password</button>
+                      <button type="button" data-local-action>Security &amp; Help</button>
+                      <button type="button" data-local-action>Enroll</button>
+                    </div>
+                  </div>
+                  <div class="demo-login-confirmation" data-login-confirmation hidden>
+                    <p class="eyebrow">Demo Login</p>
+                    <h2>Local demo ready</h2>
+                    <p>This is an educational finance demo — no real account was accessed.</p>
+                    <button class="primary-button" type="button" data-dashboard-continue>Continue to demo dashboard</button>
+                    <button class="text-button" type="button" data-login-back>Back to demo sign in</button>
+                  </div>
+                </section>
+                <button class="open-demo-account" type="button" data-local-action><span aria-hidden="true">$</span> Open a Demo Account</button>
+              </aside>
+
+              <section class="hero-promotion">
+                <p class="hero-promotion__tag">Fictional offers for educational exploration</p>
+                <h1 id="hero-title">Choose the card that works for you</h1>
+                <div class="offer-grid">
+                  <article class="offer-card">
+                    <div class="fictional-card fictional-card--coral"><span>Northstar</span><strong>Nova Cash</strong><i aria-hidden="true"></i></div>
+                    <div class="offer-card__copy"><p class="offer-value">6<sup>%</sup></p><p>choice category rewards</p><small>Fictional annual fee: $0</small><button type="button" data-local-action>Explore Nova Cash</button></div>
+                  </article>
+                  <article class="offer-card">
+                    <div class="fictional-card fictional-card--slate"><span>Northstar</span><strong>Everyday Plus</strong><i aria-hidden="true"></i></div>
+                    <div class="offer-card__copy"><p class="offer-value">1.5<sup>%</sup></p><p>unlimited cash rewards</p><small>Fictional annual fee: $0</small><button type="button" data-local-action>Explore Everyday Plus</button></div>
+                  </article>
+                  <article class="offer-card">
+                    <div class="fictional-card fictional-card--ocean"><span>Northstar</span><strong>Wayfinder</strong><i aria-hidden="true"></i></div>
+                    <div class="offer-card__copy"><p class="offer-value">2<sup>×</sup></p><p>demo travel points</p><small>Fictional annual fee: $0</small><button type="button" data-local-action>Explore Wayfinder</button></div>
+                  </article>
+                  <article class="offer-card">
+                    <div class="fictional-card fictional-card--pearl"><span>Northstar</span><strong>Clear Path</strong><i aria-hidden="true"></i></div>
+                    <div class="offer-card__copy"><p class="offer-value">0<sup>%</sup></p><p>intro demo rate</p><small>Fictional annual fee: $0</small><button type="button" data-local-action>Explore Clear Path</button></div>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="promo-section section-shell" aria-labelledby="explore-title">
+            <div class="section-heading"><p class="eyebrow">Demo tools</p><h2 id="explore-title">Explore your fictional next step</h2><p>Practice navigating common finance decisions with data that is invented for this prototype.</p></div>
+            <div class="feature-grid">
+              <article class="feature-card feature-card--checking"><span class="feature-icon" aria-hidden="true">◎</span><p class="eyebrow">Demo checking</p><h3>Build a spending routine</h3><p>See a fictional $300 welcome illustration and sample money-movement tools.</p><button type="button" data-local-action>View demo details</button></article>
+              <article class="feature-card feature-card--goals"><span class="feature-icon" aria-hidden="true">↗</span><p class="eyebrow">Financial goals</p><h3>Plan with confidence</h3><p>Use bite-size education on saving, credit, and everyday money habits.</p><button type="button" data-local-action>Explore learning tools</button></article>
+              <article class="feature-card feature-card--security"><span class="feature-icon" aria-hidden="true">⌁</span><p class="eyebrow">Demo security</p><h3>Know what to look for</h3><p>Learn how common security settings can help protect a fictional profile.</p><button type="button" data-local-action>Review demo security</button></article>
+            </div>
+          </section>
+
+          <section class="goals-section">
+            <div class="section-shell goals-section__inner">
+              <div><p class="eyebrow">Education made approachable</p><h2>Your financial goals matter</h2><p>Northstar Finance is a fictional learning environment for practicing common online banking experiences without accounts, applications, or transactions.</p></div>
+              <div class="topic-list"><button type="button" data-local-action>Saving &amp; budgeting <span aria-hidden="true">→</span></button><button type="button" data-local-action>Credit &amp; borrowing <span aria-hidden="true">→</span></button><button type="button" data-local-action>Investing basics <span aria-hidden="true">→</span></button></div>
+            </div>
+          </section>
+
+          <section class="news-section section-shell" aria-labelledby="news-title">
+            <div class="section-heading"><p class="eyebrow">Demo news &amp; information</p><h2 id="news-title">Simple guidance for fictional decisions</h2></div>
+            <div class="news-grid"><article><span aria-hidden="true">◌</span><h3>Level up account safety</h3><p>Review practical signals that help you spot suspicious requests in a demo environment.</p><button type="button" data-local-action>Read the demo guide</button></article><article><span aria-hidden="true">▣</span><h3>Build a spending snapshot</h3><p>Turn a made-up month of transactions into a clearer budgeting conversation.</p><button type="button" data-local-action>Try the sample</button></article><article><span aria-hidden="true">⌂</span><h3>Connect with demo support</h3><p>Local controls model helpful support options without connecting to any service.</p><button type="button" data-local-action>View support options</button></article></div>
+          </section>
+        </main>
+
+        <footer class="site-footer"><div class="section-shell"><div class="demo-brand demo-brand--footer"><img class="demo-brand__mark" src="assets/northstar-mark.svg" alt=""><span>Northstar Finance</span></div><p>Fictional educational finance demo. No real accounts, services, or offers.</p><button type="button" data-local-action>Privacy (demo)</button><button type="button" data-local-action>Accessibility</button></div></footer>
+      </section>
+
+      <section id="dashboard-view" class="app-view dashboard-view" aria-label="Northstar Finance fictional demo dashboard" hidden>
+        <header class="dashboard-header">
+          <div class="dashboard-mobile-header"><button type="button" data-dashboard-mobile-menu aria-expanded="false" aria-controls="dashboard-mobile-menu">☰<span>Menu</span></button><div class="dashboard-brand"><img src="assets/northstar-mark.svg" alt=""><span>DEMO FINANCE</span></div><button type="button" data-local-action>●<span>Profile</span></button></div>
+          <div class="dashboard-topbar dashboard-shell"><div class="dashboard-brand"><img src="assets/northstar-mark.svg" alt=""><span>DEMO FINANCE</span></div><button class="dashboard-personal" type="button" data-local-action>Personal <span aria-hidden="true">⌄</span></button><form id="dashboard-search-form" class="dashboard-search" role="search" novalidate data-search-form><label class="visually-hidden" for="dashboard-search">Search demo dashboard</label><input id="dashboard-search" type="search" placeholder="Search the demo" autocomplete="off"><button type="submit" aria-label="Search demo dashboard">⌕</button></form><div class="dashboard-user-actions"><button type="button" data-local-action>Welcome, Demo User <span aria-hidden="true">⌄</span></button><button type="button" data-local-action>Profile &amp; Settings</button><button class="signout-button" type="button" data-sign-out>Sign Out</button></div></div>
+          <nav class="dashboard-nav dashboard-shell" aria-label="Dashboard navigation"><button class="is-active" type="button" data-local-action>Accounts</button><button type="button" data-local-action>Pay &amp; Transfer</button><button type="button" data-local-action>Rewards &amp; Deals</button><button type="button" data-local-action>Tools &amp; Investing</button><button type="button" data-local-action>Security Center</button><button type="button" data-local-action>Open an Account</button><button type="button" data-local-action>Help &amp; Support</button></nav>
+          <nav id="dashboard-mobile-menu" class="dashboard-mobile-menu" aria-label="Mobile dashboard navigation" hidden><button type="button" data-local-action>Accounts</button><button type="button" data-local-action>Pay &amp; Transfer</button><button type="button" data-local-action>Rewards &amp; Deals</button><button type="button" data-local-action>Tools &amp; Investing</button><button type="button" data-local-action>Security Center</button><button type="button" data-local-action>Help &amp; Support</button><button type="button" data-sign-out>Sign Out</button></nav>
+        </header>
+
+        <main id="dashboard-main" class="dashboard-main dashboard-shell" tabindex="-1">
+          <section class="dashboard-column dashboard-column--accounts" aria-labelledby="accounts-title"><article class="dashboard-card accounts-card"><div class="card-heading"><h1 id="accounts-title">Accounts</h1><span aria-hidden="true">ⓘ</span></div><div class="account-group"><h2>Banking Accounts</h2><div class="account-row"><span class="account-emblem account-emblem--checking" aria-hidden="true">C</span><div><strong>Demo Checking</strong><b>$5,482.21</b><small>Available Balance</small></div><button type="button" aria-label="Demo Checking options" data-local-action>⋮</button></div><div class="account-row"><span class="account-emblem account-emblem--savings" aria-hidden="true">S</span><div><strong>Demo Savings</strong><b>$12,856.37</b><small>Available Balance</small></div><button type="button" aria-label="Demo Savings options" data-local-action>⋮</button></div></div><div class="account-group"><h2>Credit Cards</h2><div class="account-row"><span class="mini-demo-card mini-demo-card--rewards" aria-hidden="true"></span><div><strong>Demo Rewards Card</strong><b>$1,245.32</b><small>Current Balance</small></div><button type="button" aria-label="Demo Rewards Card options" data-local-action>⋮</button></div><div class="account-row"><span class="mini-demo-card mini-demo-card--travel" aria-hidden="true"></span><div><strong>Demo Travel Card</strong><b>$0.00</b><small>Current Balance</small></div><button type="button" aria-label="Demo Travel Card options" data-local-action>⋮</button></div></div></article></section>
+
+          <section class="dashboard-column dashboard-column--activity" aria-label="Demo activity"><article class="dashboard-card"><div class="card-heading"><h2>Quick Actions</h2></div><div class="quick-actions"><button type="button" data-local-action><i aria-hidden="true">⇄</i><span>Transfer</span></button><button type="button" data-local-action><i aria-hidden="true">▤</i><span>Pay Bills</span></button><button type="button" data-local-action><i aria-hidden="true">↗</i><span>Send Money</span></button><button type="button" data-local-action><i aria-hidden="true">▣</i><span>Deposit Checks</span></button><button type="button" data-local-action><i aria-hidden="true">•••</i><span>More</span></button></div></article><article class="dashboard-card spending-card"><div class="card-heading"><h2>Spending &amp; Budgeting</h2><span aria-hidden="true">ⓘ</span></div><div class="spending-content"><div class="spending-total"><b>$3,158.48</b><span>Fictional monthly spending</span><button type="button" data-local-action>View spending</button></div><div class="spending-chart" role="img" aria-label="Fictional spending chart"><span></span></div><ul class="chart-legend"><li><i class="legend-blue"></i><span>Housing</span><b>$1,450</b></li><li><i class="legend-amber"></i><span>Food &amp; dining</span><b>$520</b></li><li><i class="legend-coral"></i><span>Transportation</span><b>$680</b></li><li><i class="legend-purple"></i><span>Other</span><b>$508</b></li></ul></div></article><article class="dashboard-card transactions-card"><div class="card-heading"><h2>Recent Transactions</h2><button type="button" data-local-action>View all</button></div><ul class="transactions"><li><span>☕</span><div><strong>Coffee Shop</strong><small>Today · Fictional purchase</small></div><b>-$5.45</b></li><li><span>G</span><div><strong>Grocery Store</strong><small>Yesterday · Fictional purchase</small></div><b>-$87.23</b></li><li><span>F</span><div><strong>Fuel</strong><small>May 24 · Fictional purchase</small></div><b>-$45.00</b></li><li><span>⇣</span><div><strong>Direct Deposit — Demo Employer</strong><small>May 23 · Fictional deposit</small></div><b class="is-credit">+$2,350.00</b></li></ul></article></section>
+
+          <aside class="dashboard-column dashboard-column--support" aria-label="Demo help and offers"><article class="dashboard-card support-card"><div class="card-heading"><h2>Have a Question?</h2></div><p><strong>Demo Support is here to help.</strong></p><p>Explore local, fictional interface patterns with no account access.</p><button class="dashboard-primary-button" type="button" data-chat-demo>◌ Chat Demo</button><p class="demo-status" aria-live="polite"></p></article><article class="dashboard-card security-card"><div class="card-heading"><h2>Security Center</h2></div><p>Review your demo security settings.</p><button type="button" data-local-action>Review demo settings</button></article><article class="dashboard-card offers-card"><div class="card-heading"><h2>Demo Offers &amp; Rewards</h2></div><div class="dashboard-offer"><span class="dashboard-offer__icon dashboard-offer__icon--cash">$</span><div><strong>Demo Cash Rewards</strong><p>Fictional rewards education for this prototype.</p><button type="button" data-local-action>Explore demo</button></div></div><div class="dashboard-offer"><span class="dashboard-offer__icon dashboard-offer__icon--travel">✦</span><div><strong>Demo Travel Rewards</strong><p>Invented travel planning insights.</p><button type="button" data-local-action>Explore demo</button></div></div></article></aside>
+        </main>
+      </section>
+
+      <div id="promo-bar" class="promo-bar" role="status"><div><span class="promo-bar__icon" aria-hidden="true">$</span><strong>DEMO INSIGHT</strong><span>All offers and balances are fictional learning examples.</span></div><button type="button" aria-label="Close promotional bar" data-close-promo>×</button></div>
+      <p id="app-status" class="visually-hidden" aria-live="polite"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
