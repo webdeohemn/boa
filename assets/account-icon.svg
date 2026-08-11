@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" role="img" aria-label="Northstar account icon">
+  <defs>
+    <linearGradient id="bg" x1="12" y1="8" x2="60" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="20" y1="46" x2="53" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e21838"/>
+      <stop offset=".55" stop-color="#2b70d7"/>
+      <stop offset="1" stop-color="#0b356f"/>
+    </linearGradient>
+  </defs>
+  <circle cx="36" cy="36" r="34" fill="url(#bg)" stroke="#dce4ef" stroke-width="2"/>
+  <path d="M20 45h32l-6 6H14l6-6Z" fill="#e21838" opacity=".9"/>
+  <path d="M25 37h32l-6 6H19l6-6Z" fill="#2b70d7"/>
+  <path d="M31 29h27l-6 6H25l6-6Z" fill="#0b356f"/>
+  <text x="36" y="41" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="800" fill="#0b356f">NS</text>
+</svg>

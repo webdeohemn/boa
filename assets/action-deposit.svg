@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Deposit checks">
+  <circle cx="24" cy="24" r="23" fill="#fff" stroke="#d7dee9"/>
+  <rect x="15" y="16" width="18" height="16" rx="2" fill="#eaf2ff" stroke="#0c4aa2" stroke-width="2"/>
+  <circle cx="24" cy="24" r="4" fill="none" stroke="#0c4aa2" stroke-width="2"/>
+</svg>

@@ -494,17 +494,21 @@
   font-size: 24px;
 }
 
+.finance-demo-account-icon,
 .finance-demo-account-symbol {
-  display: grid;
+  display: block;
   width: 50px;
   height: 50px;
-  border: 1px solid #d8dde5;
   border-radius: 50%;
-  color: #0f3c86;
-  background:
-    linear-gradient(140deg, transparent 0 42%, rgb(226 24 56 / 16%) 42% 54%, transparent 54%),
-    #ffffff;
   box-shadow: 0 2px 7px rgb(31 43 63 / 12%);
+  object-fit: contain;
+}
+
+.finance-demo-account-symbol {
+  display: grid;
+  border: 1px solid #d8dde5;
+  color: #0f3c86;
+  background: #ffffff;
   font-size: 13px;
   font-weight: 850;
   place-items: center;
@@ -519,7 +523,8 @@
   width: 56px;
   height: 34px;
   border-radius: 5px;
-  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 24%), 0 2px 6px rgb(25 39 68 / 14%);
+  box-shadow: 0 2px 6px rgb(25 39 68 / 14%);
+  object-fit: cover;
 }
 
 .finance-demo-card-art--rewards {
@@ -579,18 +584,28 @@
   justify-items: center;
 }
 
+.finance-demo-action-icon,
 .finance-demo-quick-actions .finance-demo-icon {
   display: grid;
   width: 54px;
   height: 54px;
-  border: 1px solid #d5dbe4;
   border-radius: 50%;
+  place-items: center;
+}
+
+.finance-demo-action-icon img {
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+
+.finance-demo-quick-actions .finance-demo-icon {
+  border: 1px solid #d5dbe4;
   color: #0b469d;
   background: linear-gradient(180deg, #ffffff, #f7f9fc);
   box-shadow: 0 2px 7px rgb(25 39 68 / 7%);
   font-size: 25px;
   line-height: 1;
-  place-items: center;
 }
 
 .finance-demo-spending-content {
@@ -708,15 +723,11 @@
 }
 
 .finance-demo-transaction-icon {
-  display: grid;
+  display: block;
   width: 33px;
   height: 33px;
   border-radius: 50%;
-  color: #0d4fa8;
-  background: #eaf2ff;
-  font-size: 15px;
-  font-weight: 800;
-  place-items: center;
+  object-fit: contain;
 }
 
 .finance-demo-transactions div {
@@ -789,32 +800,13 @@
   align-items: center;
 }
 
+.finance-demo-support-illustration,
 .finance-demo-chat-illustration {
-  position: relative;
-  display: grid;
-  width: 86px;
-  height: 70px;
-  border: 3px solid #1b60c9;
-  border-radius: 19px;
-  color: #1b60c9;
-  font-size: 28px;
-  place-items: center;
-}
-
-.finance-demo-chat-illustration::before {
-  position: absolute;
-  top: -19px;
-  right: -10px;
-  display: grid;
-  width: 48px;
-  height: 34px;
-  border-radius: 999px;
-  color: #ffffff;
-  content: "•••";
-  background: #e21838;
-  font-size: 18px;
-  letter-spacing: 2px;
-  place-items: center;
+  display: block;
+  width: 104px;
+  max-width: 100%;
+  height: auto;
+  justify-self: end;
 }
 
 .finance-demo-status {
@@ -870,11 +862,17 @@
   margin-bottom: 18px;
 }
 
+.finance-demo-offer-art,
 .finance-demo-offer > span {
-  display: grid;
+  display: block;
   width: 110px;
   height: 86px;
   border-radius: 6px;
+  object-fit: cover;
+}
+
+.finance-demo-offer > span {
+  display: grid;
   color: #ffffff;
   font-size: 13px;
   font-weight: 850;
@@ -981,7 +979,7 @@
 
   .finance-demo-topbar,
   .finance-demo-secondary-nav {
-    display: none;
+    display: none !important;
   }
 
   .finance-demo-dashboard-header {
@@ -1117,6 +1115,12 @@
     height: 42px;
   }
 
+  .finance-demo-action-icon,
+  .finance-demo-action-icon img {
+    width: 42px;
+    height: 42px;
+  }
+
   .finance-demo-account-group,
   .finance-demo-card-heading,
   .finance-demo-transactions {
@@ -1151,6 +1155,7 @@
     grid-template-columns: 86px minmax(0, 1fr);
   }
 
+  .finance-demo-offer-art,
   .finance-demo-offer > span {
     width: 86px;
     height: 76px;
@@ -1190,6 +1195,7 @@
     gap: 12px;
   }
 
+  .finance-demo-offer-art,
   .finance-demo-offer > span {
     width: 74px;
     height: 70px;

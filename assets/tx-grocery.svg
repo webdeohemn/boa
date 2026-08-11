@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Grocery">
+  <circle cx="20" cy="20" r="19" fill="#eef8f4"/>
+  <path d="M13 16h15l-2 10H16l-3-13h-3" fill="none" stroke="#0c7b61" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="17" cy="30" r="1.8" fill="#0c7b61"/>
+  <circle cx="25" cy="30" r="1.8" fill="#0c7b61"/>
+</svg>

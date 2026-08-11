@@ -9,7 +9,7 @@
     stylesheet.id = stylesheetId;
     stylesheet.rel = "stylesheet";
     stylesheet.setAttribute("data-demo-allow-navigation", "");
-    stylesheet.href = new URL("demo-login.css", assetBase).href;
+    stylesheet.href = new URL("demo-login.css?v=alex-dashboard-assets", assetBase).href;
     document.head.append(stylesheet);
   }
 
@@ -99,7 +99,7 @@
               ${icon("search")}
             </label>
             <div class="finance-demo-user-actions">
-              <button type="button" data-finance-inert>Welcome, Demo User <span aria-hidden="true">⌄</span></button>
+              <button type="button" data-finance-inert>Welcome, Alex <span aria-hidden="true">⌄</span></button>
               <button type="button" data-finance-inert>Profile &amp; Settings</button>
               <button type="button" data-finance-signout>Sign Out</button>
             </div>
@@ -132,27 +132,27 @@
               <div class="finance-demo-account-group">
                 <h2>Banking Accounts</h2>
                 <div class="finance-demo-account-row">
-                  <span class="finance-demo-account-symbol finance-demo-account-symbol--checking" aria-hidden="true">NS</span>
-                  <div><strong>Demo Checking</strong><b>$5,482.21</b><small>Available Balance</small></div>
-                  <button type="button" data-finance-inert aria-label="Demo Checking options">⋮</button>
+                  <img class="finance-demo-account-icon" src="assets/account-icon.svg" alt="" aria-hidden="true">
+                  <div><strong>Alex Checking</strong><b>$5,482.21</b><small>Available Balance</small></div>
+                  <button type="button" data-finance-inert aria-label="Alex Checking options">⋮</button>
                 </div>
                 <div class="finance-demo-account-row">
-                  <span class="finance-demo-account-symbol finance-demo-account-symbol--savings" aria-hidden="true">NS</span>
-                  <div><strong>Demo Savings</strong><b>$12,856.37</b><small>Available Balance</small></div>
-                  <button type="button" data-finance-inert aria-label="Demo Savings options">⋮</button>
+                  <img class="finance-demo-account-icon" src="assets/account-icon-savings.svg" alt="" aria-hidden="true">
+                  <div><strong>Alex Savings</strong><b>$12,856.37</b><small>Available Balance</small></div>
+                  <button type="button" data-finance-inert aria-label="Alex Savings options">⋮</button>
                 </div>
               </div>
               <div class="finance-demo-account-group">
                 <h2>Credit Cards</h2>
                 <div class="finance-demo-account-row">
-                  <span class="finance-demo-card-art finance-demo-card-art--rewards" aria-hidden="true"></span>
-                  <div><strong>Demo Cash Rewards</strong><b>$1,245.32</b><small>Current Balance</small></div>
-                  <button type="button" data-finance-inert aria-label="Demo Cash Rewards options">⋮</button>
+                  <img class="finance-demo-card-art" src="assets/card-demo-1.svg" alt="" aria-hidden="true">
+                  <div><strong>Cash Rewards Card</strong><b>$1,245.32</b><small>Current Balance</small></div>
+                  <button type="button" data-finance-inert aria-label="Cash Rewards Card options">⋮</button>
                 </div>
                 <div class="finance-demo-account-row">
-                  <span class="finance-demo-card-art finance-demo-card-art--travel" aria-hidden="true"></span>
-                  <div><strong>Demo Travel Rewards</strong><b>$0.00</b><small>Current Balance</small></div>
-                  <button type="button" data-finance-inert aria-label="Demo Travel Rewards options">⋮</button>
+                  <img class="finance-demo-card-art" src="assets/card-demo-2.svg" alt="" aria-hidden="true">
+                  <div><strong>Travel Rewards Card</strong><b>$0.00</b><small>Current Balance</small></div>
+                  <button type="button" data-finance-inert aria-label="Travel Rewards Card options">⋮</button>
                 </div>
               </div>
               <button class="finance-demo-open-account" type="button" data-finance-inert>Open a New Account <span aria-hidden="true">+</span></button>
@@ -163,11 +163,11 @@
             <article class="finance-demo-card finance-demo-actions-card">
               <div class="finance-demo-card-heading"><h2>Quick Actions</h2></div>
               <div class="finance-demo-quick-actions">
-                <button type="button" data-finance-inert>${icon("transfer")}<span>Transfer</span></button>
-                <button type="button" data-finance-inert>${icon("bills")}<span>Pay Bills</span></button>
-                <button type="button" data-finance-inert>${icon("send")}<span>Send Money</span></button>
-                <button type="button" data-finance-inert>${icon("deposit")}<span>Deposit Checks</span></button>
-                <button type="button" data-finance-inert>${icon("more")}<span>More</span></button>
+                <button type="button" data-finance-inert><span class="finance-demo-action-icon"><img src="assets/action-transfer.svg" alt="" aria-hidden="true"></span><span>Transfer</span></button>
+                <button type="button" data-finance-inert><span class="finance-demo-action-icon"><img src="assets/action-pay-bills.svg" alt="" aria-hidden="true"></span><span>Pay Bills</span></button>
+                <button type="button" data-finance-inert><span class="finance-demo-action-icon"><img src="assets/action-send.svg" alt="" aria-hidden="true"></span><span>Send Money</span></button>
+                <button type="button" data-finance-inert><span class="finance-demo-action-icon"><img src="assets/action-deposit.svg" alt="" aria-hidden="true"></span><span>Deposit Checks</span></button>
+                <button type="button" data-finance-inert><span class="finance-demo-action-icon"><img src="assets/action-more.svg" alt="" aria-hidden="true"></span><span>More</span></button>
               </div>
             </article>
             <article class="finance-demo-card finance-demo-spending-card">
@@ -195,10 +195,10 @@
             <article class="finance-demo-card finance-demo-transactions-card">
               <div class="finance-demo-card-heading"><h2>Recent Transactions</h2><button type="button" data-finance-inert>View All</button></div>
               <ul class="finance-demo-transactions">
-                <li><span class="finance-demo-transaction-icon">☕</span><div><strong>Coffee Shop</strong><small>May 23, 2026</small></div><b>-$5.45</b></li>
-                <li><span class="finance-demo-transaction-icon">G</span><div><strong>Grocery Store</strong><small>May 22, 2026</small></div><b>-$87.23</b></li>
-                <li><span class="finance-demo-transaction-icon">F</span><div><strong>Fuel</strong><small>May 22, 2026</small></div><b>-$45.00</b></li>
-                <li><span class="finance-demo-transaction-icon">⇣</span><div><strong>Demo Employer</strong><small>May 21, 2026</small></div><b class="is-credit">+$2,350.00</b></li>
+                <li><img class="finance-demo-transaction-icon" src="assets/tx-coffee.svg" alt="" aria-hidden="true"><div><strong>Coffee Shop</strong><small>May 23, 2026</small></div><b>-$5.45</b></li>
+                <li><img class="finance-demo-transaction-icon" src="assets/tx-grocery.svg" alt="" aria-hidden="true"><div><strong>Grocery Store</strong><small>May 22, 2026</small></div><b>-$87.23</b></li>
+                <li><img class="finance-demo-transaction-icon" src="assets/tx-fuel.svg" alt="" aria-hidden="true"><div><strong>Fuel</strong><small>May 22, 2026</small></div><b>-$45.00</b></li>
+                <li><img class="finance-demo-transaction-icon" src="assets/tx-payroll.svg" alt="" aria-hidden="true"><div><strong>Alex Payroll</strong><small>May 21, 2026</small></div><b class="is-credit">+$2,350.00</b></li>
               </ul>
             </article>
           </section>
@@ -213,7 +213,7 @@
                   <button class="finance-demo-primary-action" type="button" data-finance-chat>Chat Demo</button>
                   <p class="finance-demo-status" aria-live="polite"></p>
                 </div>
-                <span class="finance-demo-chat-illustration" aria-hidden="true">${icon("chat")}</span>
+                <img class="finance-demo-support-illustration" src="assets/support-demo.svg" alt="" aria-hidden="true">
               </div>
               <div class="finance-demo-support-divider"></div>
               <div class="finance-demo-security-panel">
@@ -224,8 +224,8 @@
             </article>
             <article class="finance-demo-card finance-demo-offers-card">
               <div class="finance-demo-card-heading"><h2>Offers &amp; Demo</h2><button type="button" data-finance-inert>View All</button></div>
-              <div class="finance-demo-offer finance-demo-offer--cash"><span aria-hidden="true">Cash</span><div><strong>Demo Cash Rewards</strong><p>Explore fictional rewards.</p><button type="button" data-finance-inert>Learn More</button></div></div>
-              <div class="finance-demo-offer finance-demo-offer--travel"><span aria-hidden="true">Perks</span><div><strong>Preferred Demo Rewards</strong><p>Explore your fictional benefits.</p><button type="button" data-finance-inert>Learn More</button></div></div>
+              <div class="finance-demo-offer finance-demo-offer--cash"><img class="finance-demo-offer-art" src="assets/rewards-demo.svg" alt="" aria-hidden="true"><div><strong>Alex Cash Rewards</strong><p>Explore fictional rewards.</p><button type="button" data-finance-inert>Learn More</button></div></div>
+              <div class="finance-demo-offer finance-demo-offer--travel"><img class="finance-demo-offer-art" src="assets/perks-demo.svg" alt="" aria-hidden="true"><div><strong>Preferred Demo Rewards</strong><p>Explore your fictional benefits.</p><button type="button" data-finance-inert>Learn More</button></div></div>
             </article>
           </aside>
         </main>

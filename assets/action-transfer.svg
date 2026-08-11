@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Transfer">
+  <circle cx="24" cy="24" r="23" fill="#fff" stroke="#d7dee9"/>
+  <path d="M16 18h16m0 0-5-5m5 5-5 5M32 30H16m0 0 5-5m-5 5 5 5" fill="none" stroke="#0c4aa2" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

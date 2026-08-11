@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Coffee">
+  <circle cx="20" cy="20" r="19" fill="#eef4ff"/>
+  <path d="M13 17h12v5a6 6 0 0 1-12 0v-5Zm12 2h2.2a2.8 2.8 0 0 1 0 5.6H25" fill="none" stroke="#0d4fa8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 28h15" stroke="#0d4fa8" stroke-width="2" stroke-linecap="round"/>
+</svg>
