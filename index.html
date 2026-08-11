@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Northstar Finance is a fictional educational finance demo with no real accounts or services.">
+    <meta name="description" content="Northstar Finance is a fictional educational finance demo. It is not affiliated with any bank and collects no real accounts, passwords, payments, or personal data.">
+    <meta name="robots" content="noindex, nofollow">
     <title>Northstar Finance | Educational Demo</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="app-shell">
+      <div class="safety-banner" role="note" aria-label="Educational demo disclosure">
+        <strong>EDUCATIONAL FINANCE DEMO — NOT AFFILIATED WITH ANY BANK</strong>
+        <span>No real accounts, passwords, payments, or personal data are collected.</span>
+      </div>
+
       <section id="home-view" class="app-view" aria-label="Northstar Finance educational demo home">
         <header class="site-header">
           <div class="notice-strip" role="note">
@@ -118,10 +124,10 @@
               <aside class="demo-login-rail">
                 <section class="demo-login-card" aria-labelledby="demo-login-title">
                   <div class="demo-login-card__accent" aria-hidden="true"></div>
-                  <div class="demo-login-card__content" data-login-form-screen>
-                    <p class="eyebrow">Educational demo only</p>
-                    <h2 id="demo-login-title">Demo Sign In</h2>
-                    <p class="demo-login-card__note">Use sample text only. Entries are discarded and never sent.</p>
+                    <div class="demo-login-card__content" data-login-form-screen>
+                      <p class="eyebrow">Educational demo only</p>
+                      <h2 id="demo-login-title">Demo Sign In</h2>
+                    <p class="demo-login-card__note">Educational simulation — do not enter real credentials.</p>
                     <form id="demo-login-form" novalidate autocomplete="off">
                       <label for="demo-user-id">Demo user ID</label>
                       <input id="demo-user-id" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-1p-ignore="true" data-lpignore="true">
@@ -208,6 +214,10 @@
 
           <aside class="dashboard-column dashboard-column--support" aria-label="Demo help and offers"><article class="dashboard-card support-card"><div class="card-heading"><h2>Have a Question?</h2></div><div class="support-card__intro"><div><p><strong>Demo Support is here to help.</strong></p><p>Get personalized demo assistance.</p><button class="dashboard-primary-button" type="button" data-chat-demo>Chat Demo</button></div><img src="assets/support-demo.svg" alt="" aria-hidden="true"></div><p class="demo-status" aria-live="polite"></p><div class="support-divider"></div><h3>Security Center</h3><p>Review your demo security settings.</p><button class="security-link" type="button" data-local-action>View Demo Security</button></article><article class="dashboard-card offers-card"><div class="card-heading"><h2>Offers &amp; Demo</h2><button type="button" data-local-action>View All</button></div><div class="dashboard-offer"><img class="dashboard-offer__art" src="assets/rewards-demo.svg" alt="" aria-hidden="true"><div><strong>Alex Cash Rewards</strong><p>Explore fictional rewards.</p><button type="button" data-local-action>Learn More</button></div></div><div class="dashboard-offer"><img class="dashboard-offer__art" src="assets/perks-demo.svg" alt="" aria-hidden="true"><div><strong>Preferred Demo Rewards</strong><p>Explore your fictional benefits.</p><button type="button" data-local-action>Learn More</button></div></div></article></aside>
         </main>
+        <footer class="dashboard-disclaimer-footer dashboard-shell" role="note">
+          <strong>EDUCATIONAL FINANCE DEMO — NOT AFFILIATED WITH ANY BANK</strong>
+          <span>No real accounts, passwords, payments, or personal data are collected.</span>
+        </footer>
       </section>
 
       <div id="promo-bar" class="promo-bar" role="status"><div><span class="promo-bar__icon" aria-hidden="true">$</span><strong>DEMO INSIGHT</strong><span>All offers and balances are fictional learning examples.</span></div><button type="button" aria-label="Close promotional bar" data-close-promo>×</button></div>
